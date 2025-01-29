@@ -1,0 +1,77 @@
+.section__6 {
+  padding-top: 100px;
+  position: relative;
+  height: 685px;
+  width: 100%;
+  .svg-13 {
+    position: absolute;
+    z-index: -3;
+    top: 0px;
+    right: 0px;
+  }
+  .container {
+    width: 1160px;
+    margin: 0 auto;
+    .h2 {
+      font-weight: 500;
+      font-size: 45px;
+      line-height: 110%;
+      color: #ff4c0d;
+      padding-bottom: 40px;
+      
+    }
+  }
+  .container_slider-reviews {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .review__card {
+      border-radius: 15px;
+      width: 460px;
+      height: 294px;
+      background: #151515;
+      padding: 40px;
+      .h4 {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+        color: #f1f1f1;
+      }
+      .line {
+        width: 100px;
+        height: 3px;
+        background: #ff4c0d;
+        margin: 10px 0px 20px 0px;
+      }
+      .p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: -0.01em;
+        color: #f1f1f1;
+      }
+    }
+  }
+  .container__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1160px;
+    margin: 0 auto;
+    padding-top: 30px;
+    .btn__review {
+      cursor: pointer;
+      border-radius: 65px;
+      padding: 15px 35px;
+      width: 189px;
+      height: 54px;
+      background: #f1f1f1;
+      color: #151515;
+    }
+    .btn__left,
+    .btn__right {
+      background-color: transparent;
+      margin: 5px;
+    }
+  }
+}

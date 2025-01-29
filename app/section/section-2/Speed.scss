@@ -1,0 +1,34 @@
+.section__2 {
+  .section__container {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    background-image: url("../../../public/section2/1.jpg");
+    background-size: no-repeat;
+    margin: 0 auto;
+    .card__section-2 {
+      width: 1160px;
+      position: absolute;
+      top: 120px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+    }
+    .h3 {
+      padding-top: 120px;
+      font-weight: 500;
+      font-size: 45px;
+      line-height: 110%;
+      color: #f1f1f1;
+      width: 400px;
+    }
+    .p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: #f1f1f1;
+      width: 358px;
+      padding-top: 40px;
+    }
+  }
+}

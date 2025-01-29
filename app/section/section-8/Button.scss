@@ -1,0 +1,95 @@
+$font-family: "Ubuntu";
+
+.btn__header {
+  border: 3px solid #f1f1f1;
+  border-radius: 108px;
+  width: 248px;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 65px;
+  position: relative;
+  z-index: 1;
+  .blur {
+    transition: all 0.5s ease-in-out;
+    animation-name: animate;
+    animation-duration: 1s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 118px;
+    height: 44px;
+    border-radius: 65px;
+    background: #f1f1f1;
+    z-index: -1;
+  }
+  .btn__header-mi:nth-child(1) {
+    position: relative;
+    color: #ffffff;
+    border-radius: 65px;
+    width: 118px;
+    height: 42px;
+    transition: color 0.3s;
+    p {
+      font-family: $font-family;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      padding: 10px 30px;
+    }
+  }
+  .btn__header-mi:nth-child(2) {
+    color: #151515;
+    border-radius: 65px;
+    width: 118px;
+    height: 42px;
+    transition: color 0.3s;
+
+    p {
+      font-family: $font-family;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      padding: 10px 30px;
+    }
+  }
+}
+.btn__header.active {
+  border: 3px solid #f1f1f1;
+  border-radius: 108px;
+  width: 248px;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 65px;
+  transition: all 0.5s ease-in-out;
+  .blur {
+    position: absolute;
+    right: 130px;
+  }
+  .btn__header-mi:nth-child(1) {
+    color: #151515;
+    transition: color 0.3s;
+  }
+  .btn__header-mi:nth-child(2) {
+    color: #ffffff;
+    transition: color 0.3s;
+  }
+}
+
+// @keyframes animate {
+//   0% {
+//     top: 0;
+//     right: 0;
+//     display: none;
+//   }
+//   1% {
+//     display: flex;
+//   }
+//   100% {
+//     top: 0;
+//     right: 130px;
+//   }
+// }
