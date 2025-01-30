@@ -1,0 +1,63 @@
+.modal__window {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.404);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+  z-index: 1110;
+
+  .modal__content {
+    padding: 20px;
+    border-radius: 40px;
+    background: #161616;
+    width: 400px;
+    height: 300px;
+    transform: scale(0.4);
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 100;
+  }
+}
+
+.modal__window.active {
+  opacity: 1;
+  pointer-events: all;
+  .modal__content.active {
+    transform: scale(1);
+    padding: 40px;
+    border-radius: 40px;
+    background: #161616;
+    width: 800px;
+    height: 600px;
+    transition: all 0.4s ease;
+    position: relative;
+    .swiper {
+      height: 100%;
+      width: 400px;
+      top: -40px;
+    }
+    .bake {
+      position: absolute;
+      top: -80px;
+      right: -40px;
+      width: auto;
+      height: 499px;
+      z-index: -10;
+    }
+    .bake1 {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 340px;
+      height: 499px;
+      z-index: -10;
+    }
+  }
+}

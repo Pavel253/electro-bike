@@ -1,17 +1,21 @@
 import "./body.scss";
-import Footer from "./footer/Footer";
+import "./Header/Header.scss";
+import "./Header/Button.scss";
 
-import Header from "./header/Header";
-import Batarea from "./section/section-1/Batarea";
-import Speed from "./section/section-2/Speed";
-import Desing from "./section/section-3/Desing";
-import Security from "./section/section-4/Security";
-import MobileMi from "./section/section-5/MobileMi";
-import Review from "./section/section-6/Review";
-import Questions from "./section/section-7/Questions";
-import CardBuy from "./section/section-8/CardBuy";
+import Footer from "./Footer/Footer";
+
+import Header from "./Header/Header";
+import Batarea from "./Section/section-1/Batarea";
+import Speed from "./Section/section-2/Speed";
+import Desing from "./Section/section-3/Desing";
+import Security from "./Section/section-4/Security";
+import MobileMi from "./Section/section-5/MobileMi";
+import Review from "./Section/section-6/Review";
+import Questions from "./Section/section-7/Questions";
+import CardBuy from "./Section/section-8/CardBuy";
 
 export default function RootLayout() {
+  
   return (
     <html lang="en">
       <body className="body">

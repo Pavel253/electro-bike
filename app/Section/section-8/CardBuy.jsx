@@ -6,7 +6,7 @@ import './Button.scss';
 import img from '../../../public/section8/Байк.png'
 import Image from "next/image";
 import SetCard from "./SetCard";
-import Button from "../../button/Button";
+import Button from "../../Button/Button";
 
 const CardBuy = () => {
 

@@ -1,0 +1,83 @@
+.modal__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .modal__left {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    height: 400px;
+    .h2 {
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 100%;
+      color: #f1f1f1;
+      padding-bottom: 40px;
+    }
+    .h4 {
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 100%;
+      color: #f1f1f1;
+      padding-bottom: 20px;
+    }
+    .span {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 100%;
+      color: #fda34f;
+      margin-bottom: 10px;
+    }
+    .btn__header {
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+    .btn__buy {
+      background-color: crimson;
+      color: #f1f1f1;
+      font-size: 18px;
+      width: 132px;
+    }
+  }
+  .modal__right {
+    width: 360px;
+    height: 100%;
+    position: relative;
+    .btn__exit {
+      top: 0px;
+      right: 0px;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      z-index: 100;
+      .line {
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        border-radius: 3px;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin: auto;
+      }
+      .line:nth-child(1) {
+        transform: rotate(135deg);
+      }
+      .line:nth-child(2) {
+        transform: rotate(45deg);
+      }
+    }
+    .bake {
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 642px;
+      height: 499px;
+      z-index: -10;
+    }
+  }
+}
