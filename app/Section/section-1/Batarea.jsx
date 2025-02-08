@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Image from "next/image";
 
 import img1 from "../../../public/section1/1.jpg";
@@ -7,6 +7,13 @@ import img2 from "../../../public/section1/3.jpg";
 import "./Batarea.scss";
 
 const batarea = () => {
+
+// const [active, setActive] = useState(false);
+
+//   const handleCursor = () => {
+//     setActive(!active);
+//   };
+
   return (
     <section id="section1" className="container container__batarea">
       <h2 className="h2">
@@ -67,7 +74,7 @@ const batarea = () => {
         </defs>
       </svg>
       <div className="section__container">
-        <div className="card card__active">
+        <div className="card">
           <h4 className="h4">Три режима скорости</h4>
           <div className="line"></div>
           <p className="predlog">

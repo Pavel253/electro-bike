@@ -5,35 +5,42 @@ import Image from "next/image";
 import Button from "../Button/Button";
 import img from "../../public/icons.png";
 import bake from "../../public/Байк.png";
-import ModalBuy from "../Modal/Modal";
 import BtnMi from "../Button/BtnMi";
+import ModalBuy from "../Modal/ModalBuy/ModalBuy";
+import ModalUser from "../Modal/ModalUser/ModalUser";
 
-const Header = () => {
-  
-  const [modalData] = useState(
-
-  )
-  
-  const [activeModal, setActiveModal] = useState(false);
-
-  const handleClick = () => {
-    setActiveModal(!activeModal);
-  };
+const Header = ({ activeFon, setActiveFon, handleClickFon }) => {
+  const [activeModalBuy, setActiveModalBuy] = useState(false);
+  const [activeModalReg, setActiveModalReg] = useState(false);
 
   useEffect(() => {
-    if (activeModal) {
+    if (activeModalBuy) {
       // Блокируем скроллинг
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
       // Разблокируем скроллинг
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
 
     // Очистка эффекта
     return () => {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     };
-  }, [activeModal]);
+  }, [activeModalBuy]);
+  useEffect(() => {
+    if (activeModalReg) {
+      // Блокируем скроллинг
+      document.body.style.overflow = "hidden";
+    } else {
+      // Разблокируем скроллинг
+      document.body.style.overflow = "auto";
+    }
+
+    // Очистка эффекта
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [activeModalReg]);
 
   return (
     <header className="header">
@@ -132,7 +139,12 @@ const Header = () => {
           height={40}
         />
         <Menu />
-        <BtnMi activeModal={activeModal} setActiveModal={setActiveModal} />
+        <BtnMi
+          activeModal={activeModalBuy}
+          setActiveModalBuy={setActiveModalBuy}
+          activeModalReg={activeModalReg}
+          setActiveModalReg={setActiveModalReg}
+        />
       </div>
       <div className="header_container">
         <div className="header__container-left">
@@ -141,16 +153,33 @@ const Header = () => {
             Улучшенная производительность для дальних путешествий. Работает так
             же просто, как и выглядит.
           </p>
-          <Button />
+          <Button
+            handleClick={handleClickFon}
+            activeFon={activeFon}
+            setActiveFon={setActiveFon}
+          />
         </div>
         <div className="header__container-right">
           <Image className="bake" src={bake} />
         </div>
       </div>
       <ModalBuy
-        handleClick={handleClick}
-        activeModal={activeModal}
-        setActiveModal={setActiveModal}
+        activeFon={activeFon}
+        setActiveFon={setActiveFon}
+        handleClickFon={handleClickFon}
+        activeModal={activeModalBuy}
+        setActiveModal={setActiveModalBuy}
+        // activeModalReg={activeModalReg}
+        // setActiveModalReg={setActiveModalReg}
+      />
+      <ModalUser
+        activeFon={activeFon}
+        setActiveFon={setActiveFon}
+        handleClickFon={handleClickFon}
+        activeModal={activeModalReg}
+        setActiveModal={setActiveModalReg}
+        // activeModalReg={activeModalReg}
+        // setActiveModalReg={setActiveModalReg}
       />
     </header>
   );

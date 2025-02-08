@@ -1,6 +1,10 @@
+"use client";
+import React, { useState } from "react";
+
 import "./body.scss";
+import "./fon.scss";
 import "./Header/Header.scss";
-import "./Header/Button.scss";
+import "./Button/Button.scss";
 
 import Footer from "./Footer/Footer";
 
@@ -15,19 +19,39 @@ import Questions from "./Section/section-7/Questions";
 import CardBuy from "./Section/section-8/CardBuy";
 
 export default function RootLayout() {
-  
+  const [activeFon, setActiveFon] = useState(false);
+
+  const handleClickFon = () => {
+    setActiveFon(!activeFon);
+  };
   return (
     <html lang="en">
-      <body className="body">
-        <Header />
+      <body className={activeFon ? "body body__white" : "body body__black"}>
+        <Header
+          handleClickFon={handleClickFon}
+          activeFon={activeFon}
+          setActiveFon={setActiveFon}
+        />
         <Batarea />
         <Speed />
         <Desing />
         <Security />
         <MobileMi />
-        <Review />
-        <Questions />
-        <CardBuy />
+        <Review
+          handleClickFon={handleClickFon}
+          activeFon={activeFon}
+          setActiveFon={setActiveFon}
+        />
+        <Questions
+          handleClickFon={handleClickFon}
+          activeFon={activeFon}
+          setActiveFon={setActiveFon}
+        />
+        <CardBuy
+          handleClickFon={handleClickFon}
+          activeFon={activeFon}
+          setActiveFon={setActiveFon}
+        />
         <Footer />
       </body>
     </html>

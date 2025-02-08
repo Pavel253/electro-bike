@@ -1,8 +1,34 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "./Review.scss";
+import Btn from "../../Btn/Btn";
+import Modal from '../../Modal/ModalReview/Modal'
 
-const Review = () => {
+const Review = ({activeFon, setActiveFon, handleClickFon }) => {
+  const [activeModal, setActiveModal] = useState(false);
+  useEffect(() => {
+    if (activeModal) {
+      // Блокируем скроллинг
+      document.body.style.overflow = "hidden";
+    } else {
+      // Разблокируем скроллинг
+      document.body.style.overflow = "auto";
+    }
+
+    // Очистка эффекта
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [activeModal]);
+
+  const [items, setItems] = useState([
+    {
+      id: 1,
+      title: "Оставить отзыв",
+      className: "btn__review",
+    }
+  ]);
+
   return (
     <section id="section6" className="section__6">
       <svg
@@ -61,71 +87,101 @@ const Review = () => {
       <div className="container">
         <h2 className="h2">Отзывы о Mi Scooter Pro 2</h2>
       </div>
-      <div className="container_slider-reviews">
-        <div className="review__card">
-          <h4 className="h4">Михаил Сафонов</h4>
-          <div className="line" />
-          <p className="p">
-            Выбирал между двумя моделями: этим Mi Scooter Pro 2 и Ninebot Max
-            30P, в плюсах Макса - десятидюймовая резина и дальность пробега на
-            одном заряде, скорость зарядки. В плюсах Xiaomi - Удобства переноски
-            (вес аппарата, развесовка).
-            <br /> <br />В итоге купил Xiaomi и поставил 10 дюймовые шины -
-            получил комфорт при небольшом весе самоката.
-          </p>
-        </div>
-        <div className="review__card">
-          <h4 className="h4">Михаил Сафонов</h4>
-          <div className="line" />
-          <p className="p">
-            Выбирал между двумя моделями: этим Mi Scooter Pro 2 и Ninebot Max
-            30P, в плюсах Макса - десятидюймовая резина и дальность пробега на
-            одном заряде, скорость зарядки. В плюсах Xiaomi - Удобства переноски
-            (вес аппарата, развесовка).
-            <br /> <br />В итоге купил Xiaomi и поставил 10 дюймовые шины -
-            получил комфорт при небольшом весе самоката.
-          </p>
-        </div>
-        <div className="review__card">
-          <h4 className="h4">Михаил Сафонов</h4>
-          <div className="line" />
-          <p className="p">
-            Выбирал между двумя моделями: этим Mi Scooter Pro 2 и Ninebot Max
-            30P, в плюсах Макса - десятидюймовая резина и дальность пробега на
-            одном заряде, скорость зарядки. В плюсах Xiaomi - Удобства переноски
-            (вес аппарата, развесовка).
-            <br /> <br />В итоге купил Xiaomi и поставил 10 дюймовые шины -
-            получил комфорт при небольшом весе самоката.
-          </p>
-        </div>
-      </div>
+      <Swiper
+        className="swiper container_slider-reviews"
+        spaceBetween={100}
+        slidesPerView={4}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+          stopOnLastSlide: false,
+        }}
+        height={600}
+      >
+        <SwiperSlide>
+          <div className="review__card">
+            <h4 className="h4">Михаил Сафонов</h4>
+            <div className="line" />
+            <p className="p">
+              Выбирал между двумя моделями: этим Mi Scooter Pro 2 и Ninebot Max
+              30P, в плюсах Макса - десятидюймовая резина и дальность пробега на
+              одном заряде, скорость зарядки. В плюсах Xiaomi - Удобства
+              переноски (вес аппарата, развесовка).
+              <br /> <br />В итоге купил Xiaomi и поставил 10 дюймовые шины -
+              получил комфорт при небольшом весе самоката.
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="review__card">
+            <h4 className="h4">Михаил Сафонов</h4>
+            <div className="line" />
+            <p className="p">
+              Выбирал между двумя моделями: этим Mi Scooter Pro 2 и Ninebot Max
+              30P, в плюсах Макса - десятидюймовая резина и дальность пробега на
+              одном заряде, скорость зарядки. В плюсах Xiaomi - Удобства
+              переноски (вес аппарата, развесовка).
+              <br /> <br />В итоге купил Xiaomi и поставил 10 дюймовые шины -
+              получил комфорт при небольшом весе самоката.
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="review__card">
+            <h4 className="h4">Михаил Сафонов</h4>
+            <div className="line" />
+            <p className="p">
+              Выбирал между двумя моделями: этим Mi Scooter Pro 2 и Ninebot Max
+              30P, в плюсах Макса - десятидюймовая резина и дальность пробега на
+              одном заряде, скорость зарядки. В плюсах Xiaomi - Удобства
+              переноски (вес аппарата, развесовка).
+              <br /> <br />В итоге купил Xiaomi и поставил 10 дюймовые шины -
+              получил комфорт при небольшом весе самоката.
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="review__card">
+            <h4 className="h4">Михаил Сафонов</h4>
+            <div className="line" />
+            <p className="p">
+              Выбирал между двумя моделями: этим Mi Scooter Pro 2 и Ninebot Max
+              30P, в плюсах Макса - десятидюймовая резина и дальность пробега на
+              одном заряде, скорость зарядки. В плюсах Xiaomi - Удобства
+              переноски (вес аппарата, развесовка).
+              <br /> <br />В итоге купил Xiaomi и поставил 10 дюймовые шины -
+              получил комфорт при небольшом весе самоката.
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="review__card">
+            <h4 className="h4">Михаил Сафонов</h4>
+            <div className="line" />
+            <p className="p">
+              Выбирал между двумя моделями: этим Mi Scooter Pro 2 и Ninebot Max
+              30P, в плюсах Макса - десятидюймовая резина и дальность пробега на
+              одном заряде, скорость зарядки. В плюсах Xiaomi - Удобства
+              переноски (вес аппарата, развесовка).
+              <br /> <br />В итоге купил Xiaomi и поставил 10 дюймовые шины -
+              получил комфорт при небольшом весе самоката.
+            </p>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+
       <div className="container__btns">
-        <button className="btn__review">Оставить отзыв</button>
-        <div>
-          <button className=" btn__left">
-            <svg
-              width="54"
-              height="54"
-              viewBox="0 0 54 54"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="27" cy="27" r="27" fill="#F1F1F1" />
-            </svg>
-          </button>
-          <button className=" btn__right">
-            <svg
-              width="54"
-              height="54"
-              viewBox="0 0 54 54"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="27" cy="27" r="27" fill="#FF4C0D" />
-            </svg>
-          </button>
-        </div>
+        <Btn setActiveModal={setActiveModal} items={items} />
       </div>
+      <Modal
+        activeFon={activeFon}
+        setActiveFon={setActiveFon}
+        handleClickFon={handleClickFon}
+        activeModal={activeModal}
+        setActiveModal={setActiveModal}
+        // activeModalReg={activeModalReg}
+        // setActiveModalReg={setActiveModalReg}
+      />
     </section>
   );
 };

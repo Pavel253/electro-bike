@@ -12,7 +12,7 @@ const Security = () => {
       <div className="container">
         <h2 className="h2">Заботится о вашей безопасности</h2>
         <div className="section__container">
-          <div className="card card__active">
+          <div className="card">
             <h4 className="h4">
               Яркие ходовые <br /> огни
             </h4>

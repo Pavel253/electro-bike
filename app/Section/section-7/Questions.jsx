@@ -1,8 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import "./Questions.scss";
+import Btn from "../../Btn/Btn";
+import Modal from '../../Modal/ModalQuestion/Modal'
 
-const Questions = () => {
+const Questions = ({activeFon, setActiveFon, handleClickFon }) => {
+  const [activeModal, setActiveModal] = useState(false);
+  useEffect(() => {
+    if (activeModal) {
+      // Блокируем скроллинг
+      document.body.style.overflow = "hidden";
+    } else {
+      // Разблокируем скроллинг
+      document.body.style.overflow = "auto";
+    }
+
+    // Очистка эффекта
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [activeModal]);
+
+  const [items, setItems] = useState([
+    {
+      id: 1,
+      title: "Задать вопрос",
+      className: "btn",
+    },
+  ]);
+
   return (
     <section id="section7" className="section__7">
       <div className="container">
@@ -15,7 +41,7 @@ const Questions = () => {
             Если у вас есть собственный вопрос - задайте его через форму
             обратной связи.
           </p>
-          <button className="btn">Задать вопрос</button>
+          <Btn setActiveModal={setActiveModal} items={items} />
         </div>
         <div className="container__right">
           <div className="questions__container">
@@ -53,7 +79,7 @@ const Questions = () => {
         </div>
       </div>
       <svg
-      className="svg-15"
+        className="svg-15"
         width="840"
         height="1139"
         viewBox="0 0 840 1139"
@@ -105,6 +131,15 @@ const Questions = () => {
           </linearGradient>
         </defs>
       </svg>
+      <Modal
+        activeFon={activeFon}
+        setActiveFon={setActiveFon}
+        handleClickFon={handleClickFon}
+        activeModal={activeModal}
+        setActiveModal={setActiveModal}
+        // activeModalReg={activeModalReg}
+        // setActiveModalReg={setActiveModalReg}
+      />
     </section>
   );
 };

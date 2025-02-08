@@ -1,81 +1,138 @@
-.modal__content {
+.modal__window-buy {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  .modal__left {
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+  z-index: 1110;
+  .modal__content {
     display: flex;
-    justify-content: start;
-    align-items: start;
-    flex-direction: column;
-    height: 400px;
-    .h2 {
-      font-weight: 500;
-      font-size: 40px;
-      line-height: 100%;
-      color: #f1f1f1;
-      padding-bottom: 40px;
-    }
-    .h4 {
-      font-weight: 500;
-      font-size: 30px;
-      line-height: 100%;
-      color: #f1f1f1;
-      padding-bottom: 20px;
-    }
-    .span {
-      font-weight: 500;
-      font-size: 22px;
-      line-height: 100%;
-      color: #fda34f;
-      margin-bottom: 10px;
-    }
-    .btn__header {
-      margin-top: 30px;
-      margin-bottom: 20px;
-    }
-    .btn__buy {
-      background-color: crimson;
-      color: #f1f1f1;
-      font-size: 18px;
-      width: 132px;
-    }
-  }
-  .modal__right {
-    width: 360px;
-    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 40px;
+    width: 400px;
+    height: 300px;
+    transform: scale(0.4);
+    transition: all 0.4s ease;
     position: relative;
-    .btn__exit {
-      top: 0px;
-      right: 0px;
+    z-index: 100;
+    .modal__left {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      flex-direction: column;
+      height: 400px;
+      .h2 {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 100%;
+        padding-bottom: 40px;
+      }
+      .h4 {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 100%;
+        padding-bottom: 20px;
+      }
+      .span {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 100%;
+        color: #fda34f;
+        margin-bottom: 10px;
+      }
+      .btn__header {
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+      .btn__buy {
+        background-color: crimson;
+        color: #f1f1f1;
+        font-size: 18px;
+        width: 132px;
+      }
+    }
+    .modal__right {
+      width: 360px;
+      height: 100%;
       position: absolute;
-      width: 30px;
-      height: 30px;
-      cursor: pointer;
-      z-index: 100;
-      .line {
+      right: 40px;
+      top: 40px;
+      .btn__exit {
+        top: 0px;
+        right: 0px;
         position: absolute;
         width: 30px;
-        height: 3px;
-        background-color: white;
-        border-radius: 3px;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        bottom: 0px;
-        margin: auto;
+        height: 30px;
+        cursor: pointer;
+        z-index: 100;
+        .line {
+          position: absolute;
+          width: 30px;
+          height: 3px;
+          background-color: white;
+          border-radius: 3px;
+          top: 0px;
+          left: 0px;
+          right: 0px;
+          bottom: 0px;
+          margin: auto;
+        }
+        .line:nth-child(1) {
+          transform: rotate(135deg);
+        }
+        .line:nth-child(2) {
+          transform: rotate(45deg);
+        }
       }
-      .line:nth-child(1) {
-        transform: rotate(135deg);
+      .bake {
+        position: absolute;
+        top: -40px;
+        right: -40px;
+        width: 642px;
+        height: 499px;
+        z-index: -10;
       }
-      .line:nth-child(2) {
-        transform: rotate(45deg);
-      }
+    }
+  }
+}
+
+.modal__window-buy.active {
+  opacity: 1;
+  pointer-events: all;
+  .modal__content.active {
+    transform: scale(1);
+    padding: 40px;
+    border-radius: 40px;
+    width: 800px;
+    height: 600px;
+    transition: all 0.4s ease;
+    position: relative;
+    .swiper {
+      height: 100%;
+      width: 400px;
+      top: -40px;
     }
     .bake {
       position: absolute;
-      top: -40px;
+      top: -80px;
       right: -40px;
-      width: 642px;
+      width: auto;
+      height: 499px;
+      z-index: -10;
+    }
+    .bake1 {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 340px;
       height: 499px;
       z-index: -10;
     }

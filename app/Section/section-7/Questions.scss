@@ -26,12 +26,13 @@
         font-size: 14px;
         line-height: 150%;
         letter-spacing: -0.01em;
-        color: #f1f1f1;
         width: 360px;
         margin-bottom: 50px;
       }
       .btn {
         width: 180px;
+        color: #151515;
+        cursor: pointer;
       }
     }
     .container__right {
@@ -51,7 +52,6 @@
           font-weight: 600;
           font-size: 20px;
           line-height: 120%;
-          color: #f1f1f1;
         }
         .line {
           width: 100px;
@@ -64,7 +64,6 @@
           font-size: 14px;
           line-height: 150%;
           letter-spacing: -0.01em;
-          color: #f1f1f1;
         }
       }
     }
@@ -73,5 +72,6 @@
     position: absolute;
     left: 0px;
     top: -300px;
+    z-index: -100;
   }
 }

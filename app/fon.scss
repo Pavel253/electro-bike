@@ -1,0 +1,269 @@
+$color-black-text: #f1f1f1;
+$color-white-text: #161616;
+
+$background-black: #151515;
+$background-white: #f1f1f1;
+
+.body__black {
+  background-color: #222222;
+
+  h1,
+  .h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  .p,
+  span,
+  .header__li-a,
+  button {
+    color: $color-black-text;
+  }
+
+  .modal__window-buy, .modal__window-user  {
+    background-color: rgba(0, 0, 0, 0.404);
+    .modal__content {
+      background: #161616;
+      .modal__left {
+        .h2 {
+          color: $color-black-text;
+        }
+        .h4 {
+          color: $color-black-text;
+        }
+      }
+      .h2 {
+        color: $color-black-text;
+      }
+      .h4 {
+        color: $color-black-text;
+      }
+      .form .email__form {
+        color: $color-black-text;
+      }
+      .modal__right .btn__exit .line {
+        background-color: $color-black-text;
+      }
+      .btn__exit .line {
+        background-color: $color-black-text;
+      }
+    }
+  }
+
+  .container__batarea {
+    .section__container {
+      .line__card {
+        background: $color-black-text;
+      }
+      .card.card__active {
+        .line {
+          background: #ff4c0d;
+        }
+        .h4 {
+          color: $color-black-text;
+        }
+        .predlog {
+          color: $color-black-text;
+        }
+      }
+      .card {
+        .line {
+          background: $color-black-text;
+        }
+      }
+    }
+  }
+
+  .section__3 .container .card__container-section3 .card__section3 {
+    background: linear-gradient(360deg, #0e0e0e 0% 0.01%, #0202029a 100%);
+    .card__position {
+      .h6 {
+        color: $color-black-text;
+      }
+      .line {
+        background: $color-black-text;
+      }
+      .p {
+        color: $color-black-text;
+      }
+    }
+  }
+
+  .section__4 .container .section__container {
+    .card {
+      .h4 {
+        color: $color-black-text;
+      }
+      .line {
+        background: $color-black-text;
+      }
+      .predlog {
+        color: $color-black-text;
+      }
+    }
+    .card__active {
+      .line {
+        background: #ff4c0d;
+      }
+    }
+    .line__card {
+      background: $color-black-text;
+    }
+  }
+
+  .section__6 .container__btns .btn__review {
+    background: #f1f1f1;
+    color: #151515;
+  }
+  .section__6 .container_slider-reviews .review__card {
+    border-radius: 15px;
+    width: 460px;
+    height: 294px;
+    background: $background-black;
+    padding: 40px;
+  }
+  .section__8 .container {
+    background: $background-black;
+  }
+}
+
+.body__white {
+  background-color: #e0e0e0;
+
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  .p,
+  span,
+  .header__li-a,
+  button {
+    color: $color-white-text;
+  }
+
+  .modal__window-buy, .modal__window-user {
+    background-color: rgba(0, 0, 0, 0.842);
+    .modal__content {
+      background: #e6e6e6;
+      .modal__left {
+        .h2 {
+          color: $color-white-text;
+        }
+        .h4 {
+          color: $color-white-text;
+        }
+      }
+      .h2 {
+        color: $color-white-text;
+      }
+      .h4 {
+        color: $color-white-text;
+      }
+      .form .email__form  {
+        color: $color-white-text;
+        border: 1px solid $color-white-text;
+      }
+      .form .passwd__form {
+        color: $color-white-text;
+        border: 1px solid $color-white-text;
+      }
+      .modal__right .btn__exit .line {
+        background-color: $color-white-text;
+      }
+      .btn__exit .line {
+        background-color: $color-white-text;
+      }
+    }
+  }
+
+  .header .header_menu .header__ul .header__li .header__li-a {
+    color: $color-white-text;
+  }
+  .header .header_container .header__container-left .h1 {
+    color: #ff4c0d;
+  }
+
+  .container__batarea {
+    .section__container {
+      .line__card {
+        background: $color-white-text;
+      }
+      .card.card__active {
+        .line {
+          background: #ff4c0d;
+        }
+        .h4 {
+          color: $color-white-text;
+        }
+        .predlog {
+          color: $color-white-text;
+        }
+      }
+      .card {
+        .line {
+          background: $color-white-text;
+        }
+      }
+    }
+  }
+  .section__3 .container .card__container-section3 .card__section3 {
+    background: linear-gradient(360deg, #0e0e0e 0% 0.01%, #0202029a 100%);
+    .card__position {
+      .h6 {
+        color: $color-black-text;
+      }
+      .p {
+        color: $color-black-text;
+      }
+    }
+  }
+
+  .section__4 .container .section__container {
+    .card {
+      .h4 {
+        color: $color-white-text;
+      }
+      .line {
+        background: $color-white-text;
+      }
+      .predlog {
+        color: $color-white-text;
+      }
+    }
+    .card__active {
+      .line {
+        background: #ff4c0d;
+      }
+    }
+    .line__card {
+      background: $color-white-text;
+    }
+  }
+
+  .section__6 .container__btns .btn__review {
+    background: #f1f1f1;
+    color: #151515;
+  }
+  .section__6 .container_slider-reviews .review__card {
+    border-radius: 15px;
+    width: 460px;
+    height: 294px;
+    background: $background-white;
+    padding: 40px;
+  }
+  .section__8 .container {
+    background: $background-white;
+    .container__left .h2 {
+    }
+  }
+}

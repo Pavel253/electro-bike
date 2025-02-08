@@ -40,50 +40,55 @@
     .line__card {
       width: 40px;
       height: 3px;
-      background: #f1f1f1;
       opacity: 0.4;
       margin-top: 68px;
     }
     .card {
       width: 260px;
       height: 300px;
+      transition: all 0.5s;
       .h4 {
         font-weight: 600;
         font-size: 20px;
         line-height: 120%;
-        color: #f1f1f1;
         opacity: 0.4;
         width: 250px;
         padding-bottom: 20px;
+        transition: all 0.5s;
       }
       .line {
         width: 100%;
         height: 3px;
-        background: #f1f1f1;
         opacity: 0.4;
         margin-bottom: 20px;
+        transition: all 0.5s;
       }
       .predlog {
         font-weight: 400;
         font-size: 14px;
         line-height: 150%;
         letter-spacing: -0.01em;
-        color: #f1f1f1;
         opacity: 0.4;
+        transition: all 0.5s;
       }
     }
-    .card__active {
+    .card:hover {
+      transition: all 0.5s;
+
       .h4 {
         opacity: 1;
+        transition: all 0.5s;
       }
       .line {
         width: 100%;
         height: 3px;
         background: #ff4c0d;
         opacity: 1;
+        transition: all 0.5s;
       }
       .predlog {
         opacity: 1;
+        transition: all 0.5s;
       }
     }
   }

@@ -1,17 +1,12 @@
 "use client"; 
-import React, { useState } from "react";
+import React from "react";
 
-const Button = () => {
-
-  const [isActive, setIsActive] = useState(false);
-  
-    const handleClick = () => {
-      setIsActive(!isActive); 
-    };
+import './Button.scss'
+const Button = ({ activeFon, setActiveFon, handleClick }) => {
 
   return (
     <div
-      className={isActive ? "btn__header active" : "btn__header"}
+      className={activeFon ? "btn__header active" : "btn__header"}
       onClick={handleClick}
     >
       <div className="btn__header-mi">

@@ -10,14 +10,14 @@ $font-family: "Ubuntu";
   cursor: pointer;
   border-radius: 65px;
   position: relative;
-  z-index: 1;
+  z-index: 10;
   .blur {
     transition: all 0.5s ease-in-out;
     animation-name: animate;
     animation-duration: 1s;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 130px;
     width: 118px;
     height: 44px;
     border-radius: 65px;
@@ -26,7 +26,7 @@ $font-family: "Ubuntu";
   }
   .btn__header-mi:nth-child(1) {
     position: relative;
-    color: #ffffff;
+    color: #151515;
     border-radius: 65px;
     width: 118px;
     height: 42px;
@@ -37,10 +37,11 @@ $font-family: "Ubuntu";
       font-size: 16px;
       line-height: 150%;
       padding: 10px 30px;
+      color: #151515;
     }
   }
   .btn__header-mi:nth-child(2) {
-    color: #151515;
+    color: #ffffff;
     border-radius: 65px;
     width: 118px;
     height: 42px;
@@ -52,11 +53,12 @@ $font-family: "Ubuntu";
       font-size: 16px;
       line-height: 150%;
       padding: 10px 30px;
+      color: #ffffff;
     }
   }
 }
 .btn__header.active {
-  border: 3px solid #f1f1f1;
+  border: 3px solid #000000;
   border-radius: 108px;
   width: 248px;
   height: 48px;
@@ -66,15 +68,19 @@ $font-family: "Ubuntu";
   border-radius: 65px;
   transition: all 0.5s ease-in-out;
   .blur {
+    background: #151515;
     position: absolute;
-    right: 130px;
+    right: -1px;
   }
   .btn__header-mi:nth-child(1) {
     color: #151515;
     transition: color 0.3s;
+    p {
+      color: #151515;
+    }
   }
   .btn__header-mi:nth-child(2) {
-    color: #ffffff;
+    color: #151515;
     transition: color 0.3s;
   }
 }

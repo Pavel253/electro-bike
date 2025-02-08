@@ -1,14 +1,16 @@
 import React from "react";
 
-const BtnMi = ({ activeModal, setActiveModal, handleClick }) => {
+const BtnMi = ({ setActiveModalBuy, setActiveModalReg }) => {
   return (
     <div className="header__btn">
-      <button className="btn btn__buy" onClick={() => setActiveModal(true)}>
+      <button 
+          className="btn btn__buy" 
+          onClick={() => setActiveModalBuy(true)}>
         Купить
       </button>
       <button
         className="btn btn__Registration"
-        onClick={() => setActiveModal(true)}
+        onClick={() => setActiveModalReg(true)}
       >
         Войти
       </button>
