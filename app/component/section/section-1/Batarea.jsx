@@ -1,18 +1,12 @@
 import React, {useState} from "react";
 import Image from "next/image";
 
-import img1 from "../../../public/section1/1.jpg";
-import img2 from "../../../public/section1/3.jpg";
+import img1 from "../../../../public/section1/1.jpg";
+import img2 from "../../../../public/section1/3.jpg";
 
 import "./Batarea.scss";
 
 const batarea = () => {
-
-// const [active, setActive] = useState(false);
-
-//   const handleCursor = () => {
-//     setActive(!active);
-//   };
 
   return (
     <section id="section1" className="container container__batarea">
@@ -46,9 +40,9 @@ const batarea = () => {
             width="1423.82"
             height="1419.46"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -68,8 +62,8 @@ const batarea = () => {
             y2="786.643"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FC501F" />
-            <stop offset="1" stop-color="#FC501F" stop-opacity="0" />
+            <stop stopColor="#FC501F" />
+            <stop offset="1" stopColor="#FC501F" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>
@@ -105,8 +99,8 @@ const batarea = () => {
         </div>
       </div>
       <div className="section__container-img">
-        <Image className="img-1" src={img1} />
-        <Image className="img-2" src={img2} />
+        <Image className="img-1" alt='img' src={img1} />
+        <Image className="img-2" alt='img' src={img2} />
       </div>
       <svg
       className="svg-5"
@@ -126,14 +120,14 @@ const batarea = () => {
           <ellipse cx="571" cy="569.5" rx="289.5" ry="291" transform="rotate(-90 571 569.5)" fill="url(#paint0_linear_0_124)" />
         </g>
         <defs>
-          <filter id="filter0_f_0_124" x="0" y="0" width="1142" height="1139" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <filter id="filter0_f_0_124" x="0" y="0" width="1142" height="1139" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
             <feGaussianBlur stdDeviation="140" result="effect1_foregroundBlur_0_124" />
           </filter>
           <linearGradient id="paint0_linear_0_124" x1="307.183" y1="436.816" x2="712.761" y2="688.421" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#FC1F1F" />
-            <stop offset="1" stop-color="#FCCB1F" stop-opacity="0.31" />
+            <stop stopColor="#FC1F1F" />
+            <stop offset="1" stopColor="#FCCB1F" stopOpacity="0.31" />
           </linearGradient>
         </defs>
       </svg>

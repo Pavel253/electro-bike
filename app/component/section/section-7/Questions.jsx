@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 import "./Questions.scss";
-import Btn from "../../Btn/Btn";
-import Modal from '../../Modal/ModalQuestion/Modal'
+import Btn from "../../../component/ui/Btn/Btn";
+import Modal from '../../../component/Modal/ModalQuestion/Modal'
 
 const Questions = ({activeFon, setActiveFon, handleClickFon }) => {
   const [activeModal, setActiveModal] = useState(false);
@@ -104,9 +104,9 @@ const Questions = ({activeFon, setActiveFon, handleClickFon }) => {
             width="1142"
             height="1139"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -126,8 +126,8 @@ const Questions = ({activeFon, setActiveFon, handleClickFon }) => {
             y2="688.421"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FC1F1F" />
-            <stop offset="1" stop-color="#FCCB1F" stop-opacity="0.31" />
+            <stop stopColor="#FC1F1F" />
+            <stop offset="1" stopColor="#FCCB1F" stopOpacity="0.31" />
           </linearGradient>
         </defs>
       </svg>
@@ -137,8 +137,6 @@ const Questions = ({activeFon, setActiveFon, handleClickFon }) => {
         handleClickFon={handleClickFon}
         activeModal={activeModal}
         setActiveModal={setActiveModal}
-        // activeModalReg={activeModalReg}
-        // setActiveModalReg={setActiveModalReg}
       />
     </section>
   );

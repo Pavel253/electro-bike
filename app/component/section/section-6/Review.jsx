@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./Review.scss";
-import Btn from "../../Btn/Btn";
-import Modal from '../../Modal/ModalReview/Modal'
+import Btn from "../../../component/ui/Btn/Btn";
+import Modal from '../../../component/Modal/ModalReview/Modal'
 
 const Review = ({activeFon, setActiveFon, handleClickFon }) => {
   const [activeModal, setActiveModal] = useState(false);
@@ -57,9 +57,9 @@ const Review = ({activeFon, setActiveFon, handleClickFon }) => {
             width="1508"
             height="1503"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -79,8 +79,8 @@ const Review = ({activeFon, setActiveFon, handleClickFon }) => {
             y2="558.3"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FC501F" />
-            <stop offset="1" stop-color="#FC501F" stop-opacity="0" />
+            <stop stopColor="#FC501F" />
+            <stop offset="1" stopColor="#FC501F" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>

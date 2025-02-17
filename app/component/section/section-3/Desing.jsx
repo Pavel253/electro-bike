@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
-import img1 from "../../../public/section3/1.png";
-import img2 from "../../../public/section3/2.png";
+import img1 from "../../../../public/section3/1.png";
+import img2 from "../../../../public/section3/2.png";
 
 import "./Desing.scss";
 
@@ -35,9 +35,9 @@ const Desing = () => {
             width="1508"
             height="1503"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -57,8 +57,8 @@ const Desing = () => {
             y2="558.3"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FC501F" />
-            <stop offset="1" stop-color="#FC501F" stop-opacity="0" />
+            <stop stopColor="#FC501F" />
+            <stop offset="1" stopColor="#FC501F" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>
@@ -81,7 +81,7 @@ const Desing = () => {
         </h2>
         <div className="card__container-section3">
           <div className="card__section3">
-            <Image className="img" src={img1} />
+            <Image className="img" alt='img' src={img1} />
             <div className="card__position">
               <h6 className="h6">Минималистичный дизайн</h6>
               <p className="p">
@@ -92,7 +92,7 @@ const Desing = () => {
             </div>
           </div>
           <div className="card__section3">
-            <Image className="img" src={img2} />
+            <Image className="img" alt='img' src={img2} />
             <div className="card__position">
               <h6 className="h6">Удобная панель управления</h6>
               <p className="p">
@@ -130,9 +130,9 @@ const Desing = () => {
             width="1142"
             height="1139"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -152,8 +152,8 @@ const Desing = () => {
             y2="688.421"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FC1F1F" />
-            <stop offset="1" stop-color="#FCCB1F" stop-opacity="0.31" />
+            <stop stopColor="#FC1F1F" />
+            <stop offset="1" stopColor="#FCCB1F" stopOpacity="0.31" />
           </linearGradient>
         </defs>
       </svg>

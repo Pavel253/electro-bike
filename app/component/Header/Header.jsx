@@ -2,12 +2,14 @@
 import React, { useState, useEffect } from "react";
 import Menu from "./Menu";
 import Image from "next/image";
-import Button from "../Button/Button";
-import img from "../../public/icons.png";
-import bake from "../../public/Байк.png";
-import BtnMi from "../Button/BtnMi";
+import Button from "../../component/ui/Button/Button";
+import img from "../../../public/icons.png";
+import bake from "../../../public/Байк.png";
+import BtnMi from "../../component/ui/Button/BtnMi";
 import ModalBuy from "../Modal/ModalBuy/ModalBuy";
 import ModalUser from "../Modal/ModalUser/ModalUser";
+
+import './Header.scss'
 
 const Header = ({ activeFon, setActiveFon, handleClickFon }) => {
   const [activeModalBuy, setActiveModalBuy] = useState(false);
@@ -71,7 +73,7 @@ const Header = ({ activeFon, setActiveFon, handleClickFon }) => {
             width="1423.82"
             height="1419.46"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
             <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
@@ -114,7 +116,7 @@ const Header = ({ activeFon, setActiveFon, handleClickFon }) => {
             width="1010"
             height="1007"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
             <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
@@ -137,6 +139,7 @@ const Header = ({ activeFon, setActiveFon, handleClickFon }) => {
           className="header_menu-icon"
           width={60}
           height={40}
+          alt="image"
         />
         <Menu />
         <BtnMi
@@ -160,7 +163,7 @@ const Header = ({ activeFon, setActiveFon, handleClickFon }) => {
           />
         </div>
         <div className="header__container-right">
-          <Image className="bake" src={bake} />
+          <Image className="bake" alt="bake" src={bake} />
         </div>
       </div>
       <ModalBuy
@@ -169,8 +172,6 @@ const Header = ({ activeFon, setActiveFon, handleClickFon }) => {
         handleClickFon={handleClickFon}
         activeModal={activeModalBuy}
         setActiveModal={setActiveModalBuy}
-        // activeModalReg={activeModalReg}
-        // setActiveModalReg={setActiveModalReg}
       />
       <ModalUser
         activeFon={activeFon}
@@ -178,8 +179,6 @@ const Header = ({ activeFon, setActiveFon, handleClickFon }) => {
         handleClickFon={handleClickFon}
         activeModal={activeModalReg}
         setActiveModal={setActiveModalReg}
-        // activeModalReg={activeModalReg}
-        // setActiveModalReg={setActiveModalReg}
       />
     </header>
   );

@@ -2,11 +2,11 @@ import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import Button from "../../Button/Button";
+import Button from "../../ui/Button/Button";
 
-import bake1 from "../../../public/Байк.png";
-import bake2 from "../../../public/Modal/white/1.png";
-import bake3 from "../../../public/Modal/white/2.png";
+import bake1 from "../../../../public/Байк.png";
+import bake2 from "../../../../public/Modal/white/1.png";
+import bake3 from "../../../../public/Modal/white/2.png";
 // import bake4 from "../../../public/Modal/white/3.png";
 
 import "./ModalBuy.scss";
@@ -47,7 +47,6 @@ const ModalByu = ({
           <Swiper
             className="swiper"
             spaceBetween={100}
-            // slidesPerView={1}
             autoplay={{
               delay: 4000,
               disableOnInteraction: false,
@@ -56,13 +55,13 @@ const ModalByu = ({
             height={600}
           >
             <SwiperSlide>
-              <Image className="bake" src={bake1} />
+              <Image className="bake" alt='bake' src={bake1} />
             </SwiperSlide>
             <SwiperSlide>
-              <Image className="bake1" src={bake2} />
+              <Image className="bake1" alt='bake' src={bake2} />
             </SwiperSlide>
             <SwiperSlide>
-              <Image className="bake2" src={bake3} />
+              <Image className="bake2" alt='bake' src={bake3} />
             </SwiperSlide>
           </Swiper>
         </div>

@@ -2,10 +2,10 @@ import React from "react";
 
 import "./CardBuy.scss";
 
-import img from "../../../public/section8/Байк.png";
+import img from "../../../../public/section8/Байк.png";
 import Image from "next/image";
 import SetCard from "./SetCard";
-import Button from "../../Button/Button";
+import Button from "../../../component/ui/Button/Button";
 
 const CardBuy = ({ activeFon, setActiveFon, handleClickFon }) => {
   return (
@@ -22,7 +22,7 @@ const CardBuy = ({ activeFon, setActiveFon, handleClickFon }) => {
           <button className="btn">Купить</button>
         </div>
         <div className="container__right">
-          <Image className="img__bake" src={img} />
+          <Image alt='img' className="img__bake" src={img} />
           <SetCard />
         </div>
       </div>

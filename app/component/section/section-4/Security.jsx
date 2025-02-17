@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
-import img1 from "../../../public/section4/1.png";
-import img2 from "../../../public/section4/2.png";
+import img1 from "../../../../public/section4/1.png";
+import img2 from "../../../../public/section4/2.png";
 
 import "./Security.scss";
 
@@ -62,8 +62,8 @@ const Security = () => {
           </div>
         </div>
         <div className="section__container-img">
-          <Image className="img__1" src={img1} />
-          <Image className="img__2" src={img2} />
+          <Image className="img__1" alt='img' src={img1} />
+          <Image className="img__2" alt='img' src={img2} />
         </div>
       </div>
       <svg
@@ -92,9 +92,9 @@ const Security = () => {
             width="1010"
             height="1007"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -160,9 +160,9 @@ const Security = () => {
             width="1508"
             height="1503"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -182,8 +182,8 @@ const Security = () => {
             y2="558.3"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FC501F" />
-            <stop offset="1" stop-color="#FC501F" stop-opacity="0" />
+            <stop stopColor="#FC501F" />
+            <stop offset="1" stopColor="#FC501F" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>
