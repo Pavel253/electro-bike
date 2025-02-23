@@ -1,19 +1,15 @@
-"use client";
 import React, { useState, useEffect } from "react";
-import Menu from "./Menu";
-import Image from "next/image";
-import Button from "../../component/ui/Button/Button";
-import img from "../../../public/icons.png";
-import bake from "../../../public/Байк.png";
-import BtnMi from "../../component/ui/Button/BtnMi";
-import ModalBuy from "../Modal/ModalBuy/ModalBuy";
-import ModalUser from "../Modal/ModalUser/ModalUser";
 
-import './Header.scss'
+import Button from "../../component/ui/Button/Button";
+import bake from "../../../public/Байк.png";
+import ModalBuy from "../Modal/ModalBuy/ModalBuy";
+import Image from "next/image";
+
+import "./Header.scss";
+import HeaderMenu from "./HeaderMenu/HeaderMenu.jsx";
 
 const Header = ({ activeFon, setActiveFon, handleClickFon }) => {
   const [activeModalBuy, setActiveModalBuy] = useState(false);
-  const [activeModalReg, setActiveModalReg] = useState(false);
 
   useEffect(() => {
     if (activeModalBuy) {
@@ -29,20 +25,6 @@ const Header = ({ activeFon, setActiveFon, handleClickFon }) => {
       document.body.style.overflow = "auto";
     };
   }, [activeModalBuy]);
-  useEffect(() => {
-    if (activeModalReg) {
-      // Блокируем скроллинг
-      document.body.style.overflow = "hidden";
-    } else {
-      // Разблокируем скроллинг
-      document.body.style.overflow = "auto";
-    }
-
-    // Очистка эффекта
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [activeModalReg]);
 
   return (
     <header className="header">
@@ -132,23 +114,7 @@ const Header = ({ activeFon, setActiveFon, handleClickFon }) => {
           </filter>
         </defs>
       </svg>
-      <div className="header_menu">
-        <Image
-          id="#mi"
-          src={img}
-          className="header_menu-icon"
-          width={60}
-          height={40}
-          alt="image"
-        />
-        <Menu />
-        <BtnMi
-          activeModal={activeModalBuy}
-          setActiveModalBuy={setActiveModalBuy}
-          activeModalReg={activeModalReg}
-          setActiveModalReg={setActiveModalReg}
-        />
-      </div>
+      <HeaderMenu activeModalBuy={activeModalBuy} setActiveModalBuy={setActiveModalBuy} />
       <div className="header_container">
         <div className="header__container-left">
           <h1 className="h1">Стильный электросамокат с мощным аккумулятором</h1>
@@ -172,13 +138,6 @@ const Header = ({ activeFon, setActiveFon, handleClickFon }) => {
         handleClickFon={handleClickFon}
         activeModal={activeModalBuy}
         setActiveModal={setActiveModalBuy}
-      />
-      <ModalUser
-        activeFon={activeFon}
-        setActiveFon={setActiveFon}
-        handleClickFon={handleClickFon}
-        activeModal={activeModalReg}
-        setActiveModal={setActiveModalReg}
       />
     </header>
   );

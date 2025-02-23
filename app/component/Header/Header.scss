@@ -67,6 +67,17 @@ $font-family: "Ubuntu";
       font-size: 16px;
       line-height: 150%;
       color: #151515;
+      position: relative;
+      background-color: #f1f1f1;
+      .a {
+        width: 122px;
+        height: 48px;
+        display: block;
+        position: absolute;
+        margin-top: 10px;
+        top: 0px;
+        left: 0;
+      }
     }
   }
   .header_container {
