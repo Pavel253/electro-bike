@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Modal.scss";
+import "../Modal.scss";
 
 const ModalQuestion = ({ activeModal, setActiveModal }) => {
   return (

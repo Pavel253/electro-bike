@@ -1,0 +1,199 @@
+$font-family: "Ubuntu";
+
+.main {
+  width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  .header {
+    .header_menu {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 1170px;
+      .header_menu-icon {
+      }
+      .header__ul {
+        z-index: 5;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        width: 486px;
+        .header__li {
+          list-style-type: none;
+          .header__li-a {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: -0.01em;
+            color: #f1f1f1;
+          }
+        }
+      }
+      .header__btn {
+        z-index: 12;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 270px;
+        height: 60px;
+        padding: 10px;
+        background: #141414;
+        border-radius: 65px;
+      }
+      .btn__exit {
+        border-radius: 65px;
+        padding: 5px 12px;
+        width: 62px;
+        height: 28px;
+        color: #151515;
+      }
+      .btn__buy {
+        border-radius: 65px;
+        padding: 15px 35px;
+        width: 122px;
+        height: 48px;
+        color: #151515;
+      }
+
+      .btn__Registration {
+        border-radius: 65px;
+        padding: 15px 35px;
+        width: 122px;
+        height: 48px;
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        color: #151515;
+        position: relative;
+        background-color: #f1f1f1;
+        .a {
+          width: 122px;
+          height: 48px;
+          display: block;
+          position: absolute;
+          margin-top: 10px;
+          top: 0px;
+          left: 0;
+        }
+      }
+    }
+  }
+  .section__auth {
+    padding-top: 200px;
+    width: 500px;
+    height: 900px;
+    .container {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      flex-direction: column;
+      .h1 {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 100%;
+        padding-bottom: 40px;
+        color: #fff;
+      }
+
+      .form {
+        z-index: 10;
+        width: auto;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        width: 500px;
+        height: auto;
+        padding-bottom: 20px;
+        .email__form {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          background-color: transparent;
+          padding: 20px 0px 20px 10px;
+          border-radius: 80px;
+          border: 1px solid #fff;
+          width: 500px;
+          height: 56px;
+          margin-bottom: 20px;
+          color: #fff;
+        }
+        .question__form {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          background-color: transparent;
+          padding: 20px 0px 20px 10px;
+          border-radius: 80px;
+          border: 1px solid #fff;
+          width: 500px;
+          height: 56px;
+          margin-bottom: 20px;
+          color: #fff;
+          transition: all 0.4s ease;
+          
+        }
+
+        .passwd__form {
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          text-transform: capitalize;
+          background-color: transparent;
+          padding: 20px 0px 20px 10px;
+          border-radius: 80px;
+          border: 1px solid #fff;
+          width: 500px;
+          height: 56px;
+          margin-bottom: 20px;
+        }
+
+        .btn__form {
+          padding: 16px 40px;
+          border-radius: 100px;
+          background: #fff;
+          color: #000;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          text-transform: capitalize;
+          cursor: pointer;
+        }
+      }
+    }
+    .btn__transition {
+      padding: 16px 40px;
+      border-radius: 100px;
+      background: #fff;
+      color: #000;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      cursor: pointer;
+    }
+    .user__auth {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 100%;
+      padding-bottom: 40px;
+      position: absolute;
+      width: 100%;
+      top: 140px;
+      left: 50%;
+      transform: translate(-50%);
+      color: #fff;
+    }
+  }
+}

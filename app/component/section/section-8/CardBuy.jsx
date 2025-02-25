@@ -7,7 +7,7 @@ import Image from "next/image";
 import SetCard from "./SetCard";
 import Button from "../../../component/ui/Button/Button";
 
-const CardBuy = ({ activeFon, setActiveFon, handleClickFon }) => {
+const CardBuy = ({ setActiveModalBuy, activeModalBuy, activeFon, setActiveFon, handleClickFon }) => {
   return (
     <section className="section__8">
       <div className="container">
@@ -19,7 +19,7 @@ const CardBuy = ({ activeFon, setActiveFon, handleClickFon }) => {
             activeFon={activeFon}
             setActiveFon={setActiveFon}
           />
-          <button className="btn">Купить</button>
+          <button onClick={() => setActiveModalBuy(true)} className="btn">Купить</button>
         </div>
         <div className="container__right">
           <Image alt='img' className="img__bake" src={img} />

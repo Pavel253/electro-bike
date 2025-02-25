@@ -6,7 +6,7 @@ const BtnMi = ({ setActiveModalBuy }) => {
       <button className="btn btn__buy" onClick={() => setActiveModalBuy(true)}>
         Купить
       </button>
-        <Link className="btn btn__Registration" href="register">Войти</Link>
+        <Link className="btn btn__Registration" href="/auth">Войти</Link>
     </div>
   );
 };

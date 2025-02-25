@@ -10,14 +10,14 @@ const HeaderMenu = ({ activeModalBuy, setActiveModalBuy }) => {
   const [userName, setUserName] = useState(null);
 
   useEffect(() => {
-    const name = localStorage.getItem("userName");
+    const name = localStorage.getItem('userName');
     if (name) {
       setUserName(name);
     }
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem("userName");
+    localStorage.removeItem('userName');
     setUserName(null);
   };
 
@@ -35,15 +35,9 @@ const HeaderMenu = ({ activeModalBuy, setActiveModalBuy }) => {
       </Link>
       <Menu />
       {userName ? (
-        <div className="header__btn">
-          <button
-            className="btn btn__buy"
-            onClick={() => setActiveModalBuy(true)}
-          >
-            Купить
-          </button>
+        <div className="user-info">
           <span>{userName}</span>
-          <button className="btn__exit" onClick={handleLogout}>Выйти</button>
+          <button onClick={handleLogout}><Link>Выйти</Link></button>
         </div>
       ) : (
         <BtnMi

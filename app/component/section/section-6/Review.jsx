@@ -1,13 +1,50 @@
-"use client"
+"use client";
 
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./Review.scss";
 import Btn from "../../../component/ui/Btn/Btn";
-import Modal from '../../../component/Modal/ModalReview/Modal'
-
-const Review = ({activeFon, setActiveFon, handleClickFon }) => {
+import Modal from "../../../component/Modal/ModalReview/Modal";
+import axios from "axios";
+// /api/feedback
+const Review = ({ activeFon, setActiveFon, handleClickFon }) => {
   const [activeModal, setActiveModal] = useState(false);
+  const [feedbacks, setFeedbacks] = useState([]);
+
+  const fetchFeedbacks = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/api/feedback");
+      const data = await response.json();
+      setFeedbacks(data);
+    } catch (error) {
+      console.error("Error fetching feedbacks:", error);
+    }
+  };
+
+  const submitFeedback = async (name, feedback) => {
+    try {
+      const response = await axios.post("http://localhost:5000/api/feedback", {
+        name,
+        feedback,
+      });
+      if (response.status === 201) {
+        setFeedbacks(); // Обновляем список отзывов после успешной отправки
+      }
+    } catch (error) {
+      console.error("Error submitting feedback:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchFeedbacks();
+  }, []);
+
+  useEffect(() => {
+    if (!activeModal) {
+      fetchFeedbacks();
+    }
+  }, [activeModal]);
+
   useEffect(() => {
     if (activeModal) {
       // Блокируем скроллинг
@@ -28,7 +65,7 @@ const Review = ({activeFon, setActiveFon, handleClickFon }) => {
       id: 1,
       title: "Оставить отзыв",
       className: "btn__review",
-    }
+    },
   ]);
 
   return (
@@ -100,76 +137,15 @@ const Review = ({activeFon, setActiveFon, handleClickFon }) => {
         }}
         height={600}
       >
-        <SwiperSlide>
-          <div className="review__card">
-            <h4 className="h4">Михаил Сафонов</h4>
-            <div className="line" />
-            <p className="p">
-              Выбирал между двумя моделями: этим Mi Scooter Pro 2 и Ninebot Max
-              30P, в плюсах Макса - десятидюймовая резина и дальность пробега на
-              одном заряде, скорость зарядки. В плюсах Xiaomi - Удобства
-              переноски (вес аппарата, развесовка).
-              <br /> <br />В итоге купил Xiaomi и поставил 10 дюймовые шины -
-              получил комфорт при небольшом весе самоката.
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="review__card">
-            <h4 className="h4">Михаил Сафонов</h4>
-            <div className="line" />
-            <p className="p">
-              Выбирал между двумя моделями: этим Mi Scooter Pro 2 и Ninebot Max
-              30P, в плюсах Макса - десятидюймовая резина и дальность пробега на
-              одном заряде, скорость зарядки. В плюсах Xiaomi - Удобства
-              переноски (вес аппарата, развесовка).
-              <br /> <br />В итоге купил Xiaomi и поставил 10 дюймовые шины -
-              получил комфорт при небольшом весе самоката.
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="review__card">
-            <h4 className="h4">Михаил Сафонов</h4>
-            <div className="line" />
-            <p className="p">
-              Выбирал между двумя моделями: этим Mi Scooter Pro 2 и Ninebot Max
-              30P, в плюсах Макса - десятидюймовая резина и дальность пробега на
-              одном заряде, скорость зарядки. В плюсах Xiaomi - Удобства
-              переноски (вес аппарата, развесовка).
-              <br /> <br />В итоге купил Xiaomi и поставил 10 дюймовые шины -
-              получил комфорт при небольшом весе самоката.
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="review__card">
-            <h4 className="h4">Михаил Сафонов</h4>
-            <div className="line" />
-            <p className="p">
-              Выбирал между двумя моделями: этим Mi Scooter Pro 2 и Ninebot Max
-              30P, в плюсах Макса - десятидюймовая резина и дальность пробега на
-              одном заряде, скорость зарядки. В плюсах Xiaomi - Удобства
-              переноски (вес аппарата, развесовка).
-              <br /> <br />В итоге купил Xiaomi и поставил 10 дюймовые шины -
-              получил комфорт при небольшом весе самоката.
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="review__card">
-            <h4 className="h4">Михаил Сафонов</h4>
-            <div className="line" />
-            <p className="p">
-              Выбирал между двумя моделями: этим Mi Scooter Pro 2 и Ninebot Max
-              30P, в плюсах Макса - десятидюймовая резина и дальность пробега на
-              одном заряде, скорость зарядки. В плюсах Xiaomi - Удобства
-              переноски (вес аппарата, развесовка).
-              <br /> <br />В итоге купил Xiaomi и поставил 10 дюймовые шины -
-              получил комфорт при небольшом весе самоката.
-            </p>
-          </div>
-        </SwiperSlide>
+        {feedbacks.map((user) => (
+          <SwiperSlide key={user.id}>
+            <div className="review__card">
+              <h4 className="h4">{user.name}</h4>
+              <div className="line" />
+              <p className="p">{user.feedback}</p>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
 
       <div className="container__btns">
@@ -181,8 +157,7 @@ const Review = ({activeFon, setActiveFon, handleClickFon }) => {
         handleClickFon={handleClickFon}
         activeModal={activeModal}
         setActiveModal={setActiveModal}
-        // activeModalReg={activeModalReg}
-        // setActiveModalReg={setActiveModalReg}
+        onFeedbackSubmitted={fetchFeedbacks}
       />
     </section>
   );

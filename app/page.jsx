@@ -15,6 +15,7 @@ import CardBuy from "./component/section/section-8/CardBuy";
 
 export default function About() {
   const [activeFon, setActiveFon] = useState(false);
+  const [activeModalBuy, setActiveModalBuy] = useState(false);
 
   const handleClickFon = () => {
     setActiveFon(!activeFon);
@@ -31,11 +32,12 @@ export default function About() {
       document.body.style.backgroundColor = "rgb(21, 21, 21)";
     };
   }, [activeFon]);
-  
 
   return (
     <main className={activeFon ? "main main__white" : "main main__black"}>
       <Header
+        activeModalBuy={activeModalBuy}
+        setActiveModalBuy={setActiveModalBuy}
         handleClickFon={handleClickFon}
         activeFon={activeFon}
         setActiveFon={setActiveFon}
@@ -59,6 +61,8 @@ export default function About() {
         handleClickFon={handleClickFon}
         activeFon={activeFon}
         setActiveFon={setActiveFon}
+        activeModalBuy={activeModalBuy}
+        setActiveModalBuy={setActiveModalBuy}
       />
       <Footer />
     </main>

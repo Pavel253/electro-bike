@@ -8,8 +8,7 @@ import Image from "next/image";
 import "./Header.scss";
 import HeaderMenu from "./HeaderMenu/HeaderMenu.jsx";
 
-const Header = ({ activeFon, setActiveFon, handleClickFon }) => {
-  const [activeModalBuy, setActiveModalBuy] = useState(false);
+const Header = ({ setActiveModalBuy, activeModalBuy, activeFon, setActiveFon, handleClickFon }) => {
 
   useEffect(() => {
     if (activeModalBuy) {
