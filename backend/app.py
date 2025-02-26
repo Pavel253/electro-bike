@@ -134,7 +134,6 @@ def after_request(response):
 
 if __name__ == '__main__':
     with app.app_context():
-        # Удаляем все существующие таблицы и создаем заново
-        db.drop_all()
+        # Создаем таблицы, если они не существуют
         db.create_all()
     app.run(debug=True)
